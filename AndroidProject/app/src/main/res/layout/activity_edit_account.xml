@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editAccount"
+    android:background="@color/backgroundColor"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerLayout"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/back"
+                android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                android:rotation="-90"
+                android:layout_centerVertical="true"
+                app:tint="@color/textColor"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/titleLayout"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/searchTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/header"
+                    android:text="Edit Profile"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor"
+                android:layout_below="@id/titleLayout"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:padding="10dp">
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/changePicture"
+                android:layout_centerHorizontal="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/changePicTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Picture"
+                    android:fontFamily="@font/header"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/profileImage"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/usernameLabel"
+                android:text="Username:"
+                android:layout_below="@id/changePicture"
+                android:labelFor="@+id/usernameEdit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/header"/>
+
+            <EditText
+                android:id="@+id/usernameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_box_border"
+                android:inputType="textPersonName"
+                android:layout_below="@id/usernameLabel"
+                android:autofillHints="@string/username"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/fullnameLabel"
+                android:text="Username is invalid"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                android:id="@+id/usernameError"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullnameLabel"
+                android:text="Full Name:"
+                android:layout_below="@id/usernameEdit"
+                android:labelFor="@id/fullnameEdit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/header"/>
+
+            <EditText
+                android:id="@+id/fullnameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:background="@drawable/text_box_border"
+                android:layout_below="@id/fullnameLabel"
+                android:autofillHints="@string/full_name"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bioLabel"
+                android:text="Bio:"
+                android:layout_below="@id/fullnameEdit"
+                android:labelFor="@id/bioEdit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/header"/>
+
+            <EditText
+                android:id="@+id/bioEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:background="@drawable/text_box_border"
+                android:layout_below="@id/bioLabel"
+                android:autofillHints="Bio"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/savebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/textColor"
+                android:textColor="@color/backgroundColor"
+                android:text="Save"
+                android:layout_below="@id/bioEdit"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

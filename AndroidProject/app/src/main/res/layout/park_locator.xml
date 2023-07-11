@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerLayout"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/btnMenu"
+                android:src="@drawable/ic_baseline_menu_24"
+                android:layout_centerVertical="true"
+                app:tint="@color/textColor"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/titleLayout"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/parkLocatorTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/header"
+                    android:gravity="center"
+                    android:text="@string/ParkLoc_txt"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/backgroundColor"
+                    android:src="@drawable/ic_search"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@color/textColor" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/divider"
+                android:background="@color/textColor"
+                android:layout_below="@+id/titleLayout" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout">
+
+            <RelativeLayout
+                android:id="@+id/mapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/textColor"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:layout_marginTop="18dp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="18dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_below="@id/mapLayout"/>
+
+            <TextView
+                android:id="@+id/noresults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mapLayout"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginTop="18dp"
+                android:text="No search results \nExpand search parameters"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

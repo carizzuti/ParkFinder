@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerLayout"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                android:rotation="-90"
+                android:layout_centerVertical="true"
+                app:tint="@color/textColor"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/titleLayout"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/wishlistAddTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/header"
+                    android:text="View Item"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor"
+                android:layout_below="@id/titleLayout"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boarder"
+            android:padding="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/parkNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/header"
+                android:text="Park Name:"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/parkName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/park_name"
+                android:textColor="@color/black"
+                android:background="@drawable/text_box_border"
+                android:layout_below="@id/parkNameLabel"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/parkInfoPageLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/parkName"
+                android:fontFamily="@font/header"
+                android:text="@string/view_park_information"
+                android:textSize="12sp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/statesLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/parkInfoPageLink"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/header"
+                android:text="States:"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/states"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="States"
+                android:textColor="@color/black"
+                android:layout_below="@id/statesLabel"
+                android:background="@drawable/text_box_border"
+                android:padding="4dp" />
+
+            <TextView
+               android:id="@+id/todoListLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/states"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/header"
+                android:text="To Do List:"
+                android:textColor="@color/textColor" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/todoListLabel"
+                android:id="@+id/todoListScroll"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/todoList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="To Do List"
+                    android:textColor="@color/black"
+                    android:background="@drawable/text_box_border"
+                    android:lines="8"
+                    android:padding="4dp"/>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/notesLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/todoListScroll"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/header"
+                android:text="Additional Notes:"
+                android:textColor="@color/textColor" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notesLabel"
+                android:background="@color/white"
+                android:id="@+id/notesScroll">
+
+                <TextView
+                    android:id="@+id/additionalNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Additional Notes"
+                    android:textColor="@color/black"
+                    android:background="@drawable/text_box_border"
+                    android:lines="8"
+                    android:padding="4dp"/>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/activitiesContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notesScroll">
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight=".5"
+                    android:backgroundTint="@color/textColor"
+                    android:fontFamily="@font/header"
+                    android:text="Edit"
+                    android:textColor="@color/backgroundColor" />
+
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight=".5"
+                    android:backgroundTint="@color/textColor"
+                    android:fontFamily="@font/header"
+                    android:text="Delete"
+                    android:textColor="@color/backgroundColor" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

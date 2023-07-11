@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:id="@+id/locatorItemLayout">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/parkImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_baseline_image_24"
+                android:layout_marginEnd="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+
+            <ImageView
+                android:id="@+id/forward"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_baseline_arrow_right_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/textColor"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/parkImage"
+                android:layout_toStartOf="@id/forward"
+                android:layout_centerInParent="true"
+                android:id="@+id/landmarkText">
+
+                <TextView
+                    android:id="@+id/parkName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/park_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/parkDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/parkName"
+                    android:fontFamily="@font/content_nunito"
+                    android:text="@string/designation"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/textColor"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

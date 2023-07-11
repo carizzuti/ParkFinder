@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "950798113750",
+    "firebase_url": "https://park-finder-853ff-default-rtdb.firebaseio.com",
+    "project_id": "park-finder-853ff",
+    "storage_bucket": "park-finder-853ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950798113750:android:8007fba350ff4657042277",
+        "android_client_info": {
+          "package_name": "com.fullsail.parkfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950798113750-73fdnhhc1h6llrbfv44gno2km6oho8bu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fullsail.parkfinder",
+            "certificate_hash": "476cc1f348b2a9aba5629d63649f231bc865bc3d"
+          }
+        },
+        {
+          "client_id": "950798113750-ecn713d1871f04hqeabubcavpmcbieua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdqu56ah8b5T0wCA7rYKJaLp14sqS5zCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950798113750-ecn713d1871f04hqeabubcavpmcbieua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950798113750:android:dbe02019894e00fd042277",
+        "android_client_info": {
+          "package_name": "com.fullsail.parkfinder.App"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950798113750-m5e9b6caqldveq7fl0ctht360fr16tds.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fullsail.parkfinder.App",
+            "certificate_hash": "476cc1f348b2a9aba5629d63649f231bc865bc3d"
+          }
+        },
+        {
+          "client_id": "950798113750-ecn713d1871f04hqeabubcavpmcbieua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdqu56ah8b5T0wCA7rYKJaLp14sqS5zCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950798113750-ecn713d1871f04hqeabubcavpmcbieua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950798113750:android:dbe02019894e00fd042277",
+        "android_client_info": {
+          "package_name": "com.fullsail.parkfinder.App"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950798113750-m5e9b6caqldveq7fl0ctht360fr16tds.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fullsail.parkfinder.App",
+            "certificate_hash": "476cc1f348b2a9aba5629d63649f231bc865bc3d"
+          }
+        },
+        {
+          "client_id": "950798113750-ecn713d1871f04hqeabubcavpmcbieua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdqu56ah8b5T0wCA7rYKJaLp14sqS5zCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950798113750-ecn713d1871f04hqeabubcavpmcbieua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Park Finder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="btnMain_acc">Account</string>
+    <string name="btn_Main_park">Park Locator</string>
+    <string name="btn_main_wishlist">Wishlist</string>
+    <string name="btnMain_settings">Settings</string>
+    <string name="txtmain_park">Park Finder</string>
+    <string name="ParkLoc_txt">Park Locator</string>
+    <string name="parklocBTN">Info</string>
+    <string name="ParkInfotxt">Park Information</string>
+    <string name="backbtn"><![CDATA[<- Back]]></string>
+    <string name="morebtn">More</string>
+    <string name="moreinfoBTN">More Information</string>
+    <string name="Settingstxt">Settings</string>
+    <string name="menubtn">≡</string>
+    <string name="my_account">My Account</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="parks_visited">Parks Visited</string>
+    <string name="add_friends">Add Friends</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="search">Search</string>
+    <string name="title_activity_park_locator_maps">Map</string>
+    <string name="activities">Activities</string>
+    <string name="more_information">More Information</string>
+    <string name="park_description">Park Description</string>
+    <string name="Park_Name">Park Name</string>
+    <string name="park_name">Park Name</string>
+    <string name="view_park_information"><u>View Park Information</u></string>
+    <string name="search_by_park_name">Search by Park Name</string>
+    <string name="ZipRadiusError">When using a zip code, radius minimum is 50 miles</string>
+    <string name="RadiusTooLow">Radius must be more than 0</string>
+    <string name="ZipInvalid">Zip Code is invalid</string>
+    <string name="ZipNotFound">Zip Code not found</string>
+    <string name="username">Username</string>
+    <string name="full_name">Full Name</string>
+    <string name="designation">Designation</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

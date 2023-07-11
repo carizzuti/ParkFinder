@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/headerLayout">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/btnMenu"
+                android:src="@drawable/ic_baseline_menu_24"
+                android:layout_centerVertical="true"
+                app:tint="@color/textColor" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/titleLayout"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/parkLocatorTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/header"
+                    android:gravity="center"
+                    android:text="@string/Settingstxt"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/divider"
+                android:background="@color/textColor"
+                android:layout_below="@+id/titleLayout" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:padding="10dp"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/darkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable Dark Mode"
+                android:backgroundTint="@color/textColor"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/signoutBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:backgroundTint="@color/textColor"
+                android:layout_below="@id/darkMode"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/divider2"
+                android:background="@color/textColor"
+                android:layout_below="@id/signoutBTN"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/contactLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:fontFamily="@font/header"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_below="@id/divider2"/>
+
+            <EditText
+                android:id="@+id/emailContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_box_border"
+                android:hint="Email:"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="#807C7C"
+                android:layout_below="@id/contactLabel"
+                android:layout_marginBottom="20dp"
+                android:padding="4dp"/>
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_box_border"
+                android:inputType="phone"
+                android:hint="Phone Number:"
+                android:textColorHint="#807C7C"
+                android:textColor="@color/black"
+                android:layout_below="@id/emailContact"
+                android:layout_marginBottom="20dp"
+                android:padding="4dp"/>
+
+            <EditText
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_box_border"
+                android:hint="Feedback..."
+                android:gravity="start|top"
+                android:textColorHint="#807C7C"
+                android:minLines="5"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:layout_below="@id/phoneNumber"
+                android:layout_marginBottom="20dp"
+                android:padding="4dp"/>
+
+            <Button
+                android:id="@+id/saveContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/textColor"
+                android:text="Save"
+                android:layout_below="@id/feedback"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

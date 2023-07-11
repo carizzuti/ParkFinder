@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/landmarkItemLayout">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundColor">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/landmarkCheck"
+                android:tag="Landmark Name"
+                android:background="@color/backgroundColor"
+                android:textColor="#0E380E"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/forward"
+                android:src="@drawable/ic_baseline_arrow_right_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/textColor"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/landmarkCheck"
+                android:layout_toStartOf="@id/forward"
+                android:layout_centerInParent="true"
+                android:id="@+id/landmarkText">
+
+                <TextView
+                    android:id="@+id/landmarkName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Landmark Name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/landmarkType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/landmarkName"
+                    android:fontFamily="@font/content_nunito"
+                    android:text="Landmark Type"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/textColor" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

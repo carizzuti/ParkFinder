@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/backgroundColor"
+    tools:context=".MoreInformationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/parkImageBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:alpha="0.7"
+            android:layout_alignBottom="@id/parkName"
+            android:src="@drawable/ic_baseline_image_24"
+            android:layout_below="@id/back"/>
+
+        <TextView
+            android:id="@+id/parkName"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="@string/moreinfoBTN"
+            android:textStyle="bold"
+            android:fontFamily="@font/header"
+            android:textColor="@color/textColor"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_below="@id/back"/>
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_arrow_circle_up_24"
+            android:rotation="-90"
+            app:tint="@color/textColor"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/parkName">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activities"
+                    android:fontFamily="@font/header_font"
+                    android:paddingTop="15dp"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:id="@+id/activitiesHeader"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/activitiesHeader"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activitiesContent"
+                    android:layout_below="@id/activitiesHeader">
+
+                    <TextView
+                        android:id="@+id/activitiesContenta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/content_nunito"
+                        android:text="content1a"
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="content1b"
+                        android:fontFamily="@font/content_nunito"
+                        android:textColor="@color/textColor"
+                        android:layout_weight=".5"
+                        android:id="@+id/activitiesContentb" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="States"
+                    android:fontFamily="@font/header_font"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:id="@+id/statesHeader"
+                    android:layout_below="@id/activitiesContent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/statesHeader"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="content2"
+                    android:fontFamily="@font/content_nunito"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/statesHeader"
+                    android:id="@+id/statesContent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:fontFamily="@font/header_font"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:id="@+id/urlHeader"
+                    android:layout_below="@id/statesContent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/urlHeader"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="content3"
+                    android:fontFamily="@font/content_nunito"
+                    android:autoLink="web"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/urlHeader"
+                    android:id="@+id/urlContent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:fontFamily="@font/header_font"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:id="@+id/ContactHeader"
+                    android:layout_below="@id/urlContent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/ContactHeader"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="content4a"
+                    android:fontFamily="@font/content_nunito"
+                    android:autoLink="web"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/ContactHeader"
+                    android:id="@+id/emailContent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="content4b"
+                    android:fontFamily="@font/content_nunito"
+                    android:autoLink="web"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/emailContent"
+                    android:id="@+id/phoneContent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Entrance Fees"
+                    android:fontFamily="@font/header_font"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:id="@+id/entranceContent"
+                    android:layout_below="@id/phoneContent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/entranceContent"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="content5"
+                    android:fontFamily="@font/content_nunito"
+                    android:autoLink="web"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/entranceContent"
+                    android:id="@+id/eContent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Addresses"
+                    android:fontFamily="@font/header_font"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:id="@+id/AddressTitle"
+                    android:layout_below="@id/eContent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@id/AddressTitle"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="content6"
+                    android:fontFamily="@font/content_nunito"
+                    android:autoLink="web"
+                    android:textColor="@color/textColor"
+                    android:layout_below="@id/AddressTitle"
+                    android:id="@+id/AddressContent"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

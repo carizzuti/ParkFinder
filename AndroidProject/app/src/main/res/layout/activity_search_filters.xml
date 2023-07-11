@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SearchFiltersActivity"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/backgroundColor"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headerLayout"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/back"
+                android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                android:rotation="-90"
+                android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/titleLayout"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/searchTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/header"
+                    android:text="Filter Search"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor"
+                android:layout_below="@id/titleLayout"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/headerLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutParkNameSearch">
+
+                <TextView
+                    android:id="@+id/parkNameSearchLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Park Name:"
+                    android:fontFamily="@font/header"
+                    android:textColor="@color/textColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteParkNameSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/parkNameSearchLabel"
+                    android:background="@drawable/text_box_border"
+                    android:textColor="@color/black"
+                    android:completionThreshold="1"
+                    android:hint="@string/search_by_park_name"
+                    android:layout_marginBottom="16dp"
+                    android:padding="4dp"/>
+
+                <Button
+                    android:id="@+id/btnNameSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/autoCompleteParkNameSearch"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/textColor"
+                    android:fontFamily="@font/header"
+                    android:textColor="@color/backgroundColor"
+                    android:text="@string/search_by_park_name" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="OR SELECT FILTERS"
+                android:textColor="@color/black"
+                android:fontFamily="@font/header"
+                android:layout_below="@id/layoutParkNameSearch"/>
+
+            <View
+                android:id="@+id/lineSpace"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/txtOr"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/radiusSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lineSpace"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/zipCodeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Zip Code:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/textColor"
+                    android:fontFamily="@font/header"/>
+
+                <EditText
+                    android:id="@+id/etZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zipCodeLabel"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/text_box_border"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/radiusLabel"
+                    android:text="Zip Code is invalid"
+                    android:textColor="#FF0000"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    android:id="@+id/zipCodeError"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radiusLabel"
+                    android:layout_below="@+id/etZipCode"
+                    android:text="Search Radius:"
+                    android:textColor="@color/textColor"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/header"/>
+
+                <EditText
+                    android:id="@+id/etRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radiusLabel"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/text_box_border"
+                    android:inputType="number"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/designationLabel"
+                    android:text="When using a zip code, radius minimum is 50 miles"
+                    android:textColor="#FF0000"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    android:id="@+id/radiusError"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etRadius"
+                    android:id="@+id/designationLabel"
+                    android:text="Designation:"
+                    android:textColor="@color/textColor"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/header"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/designationLabel"
+                    android:background="@drawable/text_box_border"
+                    android:completionThreshold="1"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp"
+                    android:padding="4dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Number of Results to Display:"
+                    android:id="@+id/parksToDisplayLabel"
+                    android:textSize="12sp"
+
+                    android:textColor="@color/textColor"
+                    android:fontFamily="@font/header"
+                    android:layout_below="@id/autoCompleteDesignation"/>
+
+                <EditText
+                    android:id="@+id/etParksToDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/parksToDisplayLabel"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/text_box_border"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btnSaveFilters"
+                    android:text="Value must be 1 or more"
+                    android:textColor="#FF0000"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    android:id="@+id/displayNumberError"/>
+
+                <Button
+                    android:id="@+id/btnSaveFilters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etParksToDisplay"
+                    android:backgroundTint="@color/textColor"
+                    android:fontFamily="@font/header"
+                    android:textColor="@color/backgroundColor"
+                    android:text="Save Filters and Search" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="16dp"
+    tools:context=".LandmarkListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/headerLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/landmarkHeaderLayout">
+
+            <ImageView
+                android:id="@+id/landmarksImageBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:alpha="0.7"
+                android:layout_below="@id/back"
+                android:layout_alignBottom="@id/landmarksPageHeader"
+                tools:srcCompat="@drawable/ic_baseline_image_24" />
+
+            <TextView
+                android:id="@+id/landmarksPageHeader"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/back"
+                android:fontFamily="@font/header"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                android:text="Landmarks and Visitor Centers"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                android:rotation="-90"
+                app:tint="@color/textColor"/>
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0% Complete"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/textColor"
+            android:layout_alignTop="@id/back"
+            android:layout_alignBottom="@id/back"
+            android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/landmarkHeaderLayout"
+            android:id="@+id/rvLayout">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Progress"
+                android:backgroundTint="@color/textColor"
+                android:id="@+id/btnSave" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/landmarkListRecyclerView"
+                android:layout_below="@id/btnSave"
+                android:background="@null"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
