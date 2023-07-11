@@ -1,2 +1,2 @@
 # 2106_CSBS_ParkFinder
-Captsone CSBS Final Project
+Capstone CSBS Final Project
