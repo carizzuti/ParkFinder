@@ -21,11 +21,11 @@
 ### Main Menu and UI
 <img src="https://github.com/carizzuti/ParkFinder/blob/02ddf2125d1421cc9c73c317f1c61a2144768579/Preview/Main_Menu.png" alt="Main Menu" width="200"/>
 
-### Park Information and Landmarks
-[Park_Information.webm](https://github.com/user-attachments/assets/cf839d54-504e-4cf9-b6f1-ae40c5079f81)
-
 ### Park Locator Search and Map
 [Park_Locator.webm](https://github.com/user-attachments/assets/09bf5aa6-cc6b-4ca2-aa74-3ae6b349fab1)
+
+### Park Information and Landmarks
+[Park_Information.webm](https://github.com/user-attachments/assets/cf839d54-504e-4cf9-b6f1-ae40c5079f81)
 
 ### Wishlist Menu and Items
 <img src="https://github.com/carizzuti/ParkFinder/blob/02ddf2125d1421cc9c73c317f1c61a2144768579/Preview/Wishlist_Main.png" alt="Wishlist Main" width="200"/>
